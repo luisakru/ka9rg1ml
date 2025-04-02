@@ -55,10 +55,10 @@ describe("Webhook Service", () => {
         });
 
         it('should log a warning and return null if no contact is found', async () => {
-            jest.spyOn(hubspotService, 'fetchHubspotContact').mockResolvedValue(null);
+            jest.spyOn(hubspotService, 'fetchHubspotContact').mockResolvedValue(undefined);
 
             const result = await getHubspotContact(123);
-            expect(result).toBeNull();
+            expect(result).toBeUndefined();
             expect(logger.warn).toHaveBeenCalledWith('No HubSpot contact found with contactId 123');
         });
     });

@@ -58,7 +58,7 @@ export async function createHubSpotContact(customer: NewCustomer) {
 
 export async function updateHubSpotContact(email: string, customer: CustomerUpdate) {
   try {
-    await axios.patch(
+    return await axios.patch(
       `${HUBSPOT_API_URL}/crm/v3/objects/contacts/${email}?idProperty=email`,
       { properties: customer },
       axiosConfig
@@ -68,6 +68,6 @@ export async function updateHubSpotContact(email: string, customer: CustomerUpda
       throw new HttpError('An unknown error occurred while updating HubSpot contact', 500);
     }
 
-    return handleAxiosError(error);
+    handleAxiosError(error);
   }
 }
