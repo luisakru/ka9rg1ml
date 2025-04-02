@@ -209,3 +209,4 @@ While the current implementation meets the requirements, there are several enhan
 - **Access Token Management:** It's important to note that, in a production environment the access token should not be stored in the .env file. Instead, it should be securely managed using a secrets management solution or environment-specific variables.
 - **Async Operation Bug in Jest:** There's an issue where Jest doesn't exit after tests due to unfinished async operations. This is something I would fix if I had more time.
 - **Linting and Formatting:** Better linting and formatting (e.g., ESLint, Prettier) to ensure consistent code quality.
+- **Refactor customerController.test.ts:** Only test controller related logic, move business logic tests into customerService.test.ts.
