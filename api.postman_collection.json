@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "eb0fc533-e21e-4933-b23a-c6bb4e07d3d0",
+		"name": "hubspot-integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzUzMTc1OX0.d1eavhSqrmuYYbKcDblZt3XGmLTIIjMnRiVAozW4T_A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Anja\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sonja@hubspot.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sonja@hubspot.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET customer by email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzUzMTc1OX0.d1eavhSqrmuYYbKcDblZt3XGmLTIIjMnRiVAozW4T_A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/sonja@hubspot.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sonja@hubspot.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MzUzMTc1OX0.d1eavhSqrmuYYbKcDblZt3XGmLTIIjMnRiVAozW4T_A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"sonja@hubspot.com\",\n    \"firstname\": \"Sonja\",\n    \"lastname\": \"Strauch\",\n    \"phone\": \"(555) 555-5555\",\n    \"company\": \"Tier\",\n    \"website\": \"hubspot.com\",\n    \"lifecyclestage\": \"marketingqualifiedlead\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-token/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-token",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
