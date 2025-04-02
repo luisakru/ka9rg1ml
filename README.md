@@ -11,6 +11,16 @@ The project consits out of two services:
 - **Inbound Sync (Webhook → Postgres):** When HubSpot sends a webhook event, the service updates the local Postgres database.
 - **Outbound Sync (API → HubSpot):** When the API creates or update a customer in Postgres, it makes an API request to create or update the corresponding record in HubSpot.
 
+## Quick Setup
+1. Copy .env.example and rename it to .env
+1. Add your token to .env file
+1. Install dependencies: `yarn install`
+1. Start db: `yarn db:start`
+1. Start api: `yarn start`
+1. Start webhook: `yarn start:webhook`
+1. Expose webhook url: `yarn expose`
+1. Test: `yarn test`
+
 ## API
 
 Start API server (`localhost:8080`): `yarn start`
